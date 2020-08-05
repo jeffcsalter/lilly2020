@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package lilly2020
+ * @package lilly2020020
  */
 
 ?>
@@ -28,7 +28,9 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
-			the_custom_logo();
+			the_custom_logo(); ?>
+			<div class="site-branding-text">
+				<?php
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -43,10 +45,13 @@
 				?>
 				<p class="site-description"><?php echo $lilly2020_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
+			</div><!-- site-branding-text -->
+<div id="primary-menu-trigger" class="toggle-menu"><span>Menu</span></div>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lilly2020' ); ?></button>
+
+
 			<?php
 			wp_nav_menu(
 				array(
