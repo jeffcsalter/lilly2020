@@ -1,10 +1,10 @@
 <?php
 /**
- * lilly2020 functions and definitions
+ * Lilly 2 functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package lilly2020
+ * @package Lilly_2
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -24,7 +24,7 @@ if ( ! function_exists( 'lilly2020_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on lilly2020, use a find and replace
+		 * If you're building a theme based on Lilly 2, use a find and replace
 		 * to change 'lilly2020' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'lilly2020', get_template_directory() . '/languages' );
@@ -144,9 +144,10 @@ add_action( 'widgets_init', 'lilly2020_widgets_init' );
  */
 function lilly2020_scripts() {
 	wp_enqueue_style( 'lilly2020-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'lilly2020-custom-styles', get_template_directory_uri() . '/custom.css' );
 	wp_style_add_data( 'lilly2020-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'lilly2020-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'lilly2020-navigation', get_template_directory_uri() . '/js/custom-navigation.js', array('jquery'), null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -180,4 +181,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
