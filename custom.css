@@ -125,14 +125,43 @@ transition: all .3s ease-in-out 0s;
 		display: flex !important;
 		justify-content: center;
 	}
-}
-
-
-	
+	}
 }
 @media screen and (min-width: 900px) {
 	.main-navigation ul {
 		flex-direction: row;
 		justify-content: flex-end;
+	}
+}
+/***************** Footer Styles *******************/
+.site-info {
+	display: flex;
+	justify-content: center;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border-top: 1px solid rgba(0, 0, 0, 1);
+	font-size: .9em;
+	font-style: italic;
+}
+.site-footer {
+	display: flex;
+	flex-direction: column;
+}
+.footer-widgets {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.footer-widget-one, .footer-widget-two, .footer-widget-three {
+	display: flex;
+	justify-content: center;
+}
+@media screen and (min-width: 600px) {
+	.footer-widgets {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.footer-widget-one, .footer-widget-two, .footer-widget-three {
+		max-width: 32%;
 	}
 }

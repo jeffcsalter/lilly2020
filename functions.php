@@ -136,6 +136,39 @@ function lilly2020_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'			=>	esc_html__( 'Footer Widget One', 'lilly2020' ),
+			'id'			=>	'footer-widget-one',
+			'description'	=>	esc_html__( 'Appears in the footer area', 'lilly2020' ),
+			'before_widget'	=>	'<aside id="%1$s" class="widget %2$s">',
+			'after_widget'	=>	'</aside>',
+			'before_title'	=>	'<h3 class="widget-title">',
+			'after_title'	=>	'</div>',
+		
+		));
+	register_sidebar(
+		array(
+			'name'			=>	esc_html__( 'Footer Widget Two', 'lilly2020' ),
+			'id'			=>	'footer-widget-two',
+			'description'	=>	esc_html__( 'Appears in the footer area', 'lilly2020' ),
+			'before_widget'	=>	'<aside id="%1$s" class="widget %2$s">',
+			'after_widget'	=>	'</aside>',
+			'before_title'	=>	'<h3 class="widget-title">',
+			'after_title'	=>	'</div>',
+		
+	));
+	register_sidebar(
+		array(
+			'name'			=>	esc_html__( 'Footer Widget Three', 'lilly2020' ),
+			'id'			=>	'footer-widget-three',
+			'description'	=>	esc_html__( 'Appears in the footer area', 'lilly2020' ),
+			'before_widget'	=>	'<aside id="%1$s" class="widget %2$s">',
+			'after_widget'	=>	'</aside>',
+			'before_title'	=>	'<h3 class="widget-title">',
+			'after_title'	=>	'</div>',
+		
+	));
 }
 add_action( 'widgets_init', 'lilly2020_widgets_init' );
 
