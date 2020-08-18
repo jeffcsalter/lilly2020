@@ -100,6 +100,9 @@ if ( ! function_exists( 'lilly2020_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		// Enable block styles on the front end. 
+		add_theme_support( 'wp-block-styles' );
 	}
 endif;
 add_action( 'after_setup_theme', 'lilly2020_setup' );
